@@ -1,546 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rahul Tiwari | Professional Trader</title>
+<title>Rahul Tiwari | Professional Trader</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #080b12;
-            color: #ffffff;
-            line-height: 1.6;
-        }
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#070b12;
+    color:#fff;
+    line-height:1.6;
+}
 
-        /* NAVBAR */
-        nav {
-            width: 100%;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #0c1019;
-            border-bottom: 1px solid #202735;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+/* NAVBAR */
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#0c111a;
+    border-bottom:1px solid #26303d;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #00d084;
-        }
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#00d084;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:28px;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #ddd;
-            transition: 0.3s;
-        }
+nav a{
+    text-decoration:none;
+    color:#ddd;
+    transition:.3s;
+}
 
-        nav ul li a:hover {
-            color: #00d084;
-        }
+nav a:hover{
+    color:#00d084;
+}
 
-        /* HERO */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+    background:radial-gradient(circle at top,#123c2d,#070b12 60%);
+}
 
-            background:
-                radial-gradient(circle at top, #14251f, #080b12 55%);
-        }
+.hero-content{
+    max-width:900px;
+}
 
-        .hero-content {
-            max-width: 850px;
-        }
+/* PROFILE */
+.profile{
+    width:150px;
+    height:150px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    overflow:hidden;
+    border:3px solid #00d084;
+    background:#101722;
+    box-shadow:0 0 35px rgba(0,208,132,.25);
+}
 
-        .tag {
-            color: #00d084;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
 
-        .hero h1 {
-            font-size: 65px;
-            margin-bottom: 15px;
-        }
+.tag{
+    color:#00d084;
+    letter-spacing:3px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
 
-        .hero h1 span {
-            color: #00d084;
-        }
+.hero h1{
+    font-size:65px;
+    margin-bottom:15px;
+}
 
-        .hero p {
-            font-size: 20px;
-            color: #b9bec9;
-            margin-bottom: 30px;
-        }
+.hero h1 span{
+    color:#00d084;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 13px 28px;
-            margin: 8px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.hero p{
+    color:#b7beca;
+    font-size:20px;
+    margin-bottom:30px;
+}
 
-        .primary {
-            background: #00d084;
-            color: #07100c;
-        }
+.btn{
+    display:inline-block;
+    padding:13px 28px;
+    margin:7px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
 
-        .primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,208,132,0.25);
-        }
+.primary{
+    background:#00d084;
+    color:#06100b;
+}
 
-        .secondary {
-            border: 1px solid #00d084;
-            color: #00d084;
-        }
+.primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(0,208,132,.25);
+}
 
-        .secondary:hover {
-            background: #00d084;
-            color: #07100c;
-        }
+.secondary{
+    border:1px solid #00d084;
+    color:#00d084;
+}
 
-        /* COMMON */
-        section {
-            padding: 90px 8%;
-        }
+.secondary:hover{
+    background:#00d084;
+    color:#06100b;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+/* SECTIONS */
+section{
+    padding:90px 7%;
+}
 
-        .section-title h2 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+.title{
+    text-align:center;
+    margin-bottom:50px;
+}
 
-        .section-title p {
-            color: #9ca3af;
-        }
+.title h2{
+    font-size:40px;
+    margin-bottom:10px;
+}
 
-        /* ABOUT */
-        .about {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
+.title p{
+    color:#89919e;
+}
 
-        .about p {
-            color: #b9bec9;
-            font-size: 18px;
-        }
+/* ABOUT */
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
 
-        /* STATS */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+.about p{
+    color:#b8bec8;
+    font-size:18px;
+}
 
-        .stat-box {
-            width: 250px;
-            padding: 35px 20px;
-            text-align: center;
-            background: #10151f;
-            border: 1px solid #202735;
-            border-radius: 10px;
-        }
+/* EXPERIENCE */
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
 
-        .stat-box h3 {
-            font-size: 40px;
-            color: #00d084;
-        }
+.stat{
+    width:260px;
+    padding:35px 20px;
+    text-align:center;
+    background:#101722;
+    border:1px solid #25303d;
+    border-radius:12px;
+    transition:.3s;
+}
 
-        .stat-box p {
-            color: #aaa;
-        }
+.stat:hover{
+    transform:translateY(-7px);
+    border-color:#00d084;
+}
 
-        /* SERVICES */
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+.stat h3{
+    color:#00d084;
+    font-size:40px;
+}
 
-        .service-card {
-            width: 300px;
-            min-height: 230px;
-            padding: 30px;
-            background: #10151f;
-            border: 1px solid #202735;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
+.stat p{
+    color:#aab1bc;
+}
 
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: #00d084;
-        }
+/* SERVICES */
+.services{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
 
-        .service-card .icon {
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
+.card{
+    width:310px;
+    min-height:250px;
+    padding:30px;
+    background:#101722;
+    border:1px solid #25303d;
+    border-radius:12px;
+    transition:.3s;
+}
 
-        .service-card h3 {
-            margin-bottom: 10px;
-            color: #00d084;
-        }
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#00d084;
+}
 
-        .service-card p {
-            color: #aeb4c0;
-        }
+.icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
 
-        /* PHILOSOPHY */
-        .philosophy {
-            max-width: 900px;
-            margin: auto;
-            text-align: center;
-        }
+.card h3{
+    color:#00d084;
+    margin-bottom:12px;
+}
 
-        .philosophy-box {
-            background: #10151f;
-            border-left: 4px solid #00d084;
-            padding: 30px;
-            border-radius: 8px;
-        }
+.card p{
+    color:#aeb5c0;
+}
 
-        .philosophy-box p {
-            color: #c4c8d0;
-            font-size: 18px;
-        }
+/* PHILOSOPHY */
+.philosophy{
+    max-width:900px;
+    margin:auto;
+}
 
-        /* CONTACT */
-        .contact {
-            text-align: center;
-            background: #0c1019;
-        }
+.quote{
+    background:#101722;
+    border-left:4px solid #00d084;
+    padding:35px;
+    text-align:center;
+    border-radius:8px;
+}
 
-        .contact p {
-            color: #aaa;
-            margin-bottom: 25px;
-        }
+.quote p{
+    color:#c5cad2;
+    font-size:19px;
+}
 
-        /* DISCLAIMER */
-        .disclaimer {
-            padding: 35px 8%;
-            background: #07090e;
-            color: #777;
-            text-align: center;
-            font-size: 13px;
-        }
+/* CONTACT */
+.contact{
+    text-align:center;
+    background:#0c1119;
+}
 
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #05070b;
-            color: #777;
-        }
+.contact-info{
+    margin-bottom:25px;
+}
 
-        /* MOBILE */
-        @media (max-width: 700px) {
+.contact-info p{
+    color:#c0c5ce;
+    margin:10px;
+    font-size:17px;
+}
 
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
+/* DISCLAIMER */
+.disclaimer{
+    padding:35px 8%;
+    text-align:center;
+    background:#05070b;
+    color:#747c87;
+    font-size:13px;
+}
 
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+/* FOOTER */
+footer{
+    background:#030509;
+    color:#707782;
+    text-align:center;
+    padding:25px;
+}
 
-            .hero h1 {
-                font-size: 42px;
-            }
+/* MOBILE */
+@media(max-width:700px){
 
-            .hero p {
-                font-size: 17px;
-            }
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
 
-            section {
-                padding: 65px 6%;
-            }
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 
-            .section-title h2 {
-                font-size: 32px;
-            }
-        }
-    </style>
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    section{
+        padding:65px 6%;
+    }
+
+    .title h2{
+        font-size:32px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="logo">RT | TRADING</div>
+<!-- NAVIGATION -->
+<nav>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="logo">
+        RT | TRADING
+    </div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
 
 
-    <!-- HERO -->
-    <section class="hero" id="home">
+<!-- HERO -->
+<section class="hero" id="home">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <div class="tag">TRADER • MARKETS • DISCIPLINE</div>
-
-            <h1>
-                Rahul <span>Tiwari</span>
-            </h1>
-
-            <p>
-                Professional Trader with 3+ years of experience
-                in Stocks & Futures and Options.
-            </p>
-
-            <a href="#services" class="btn primary">
-                Explore Services
-            </a>
-
-            <a href="#contact" class="btn secondary">
-                Get In Touch
-            </a>
-
+        <div class="profile">
+            <img src="profile.jpg" alt="Rahul Tiwari">
         </div>
 
-    </section>
-
-
-    <!-- ABOUT -->
-    <section id="about">
-
-        <div class="section-title">
-            <h2>About Me</h2>
-            <p>Experience. Discipline. Risk Management.</p>
+        <div class="tag">
+            TRADER • STOCKS • F&O
         </div>
 
-        <div class="about">
+        <h1>
+            Rahul <span>Tiwari</span>
+        </h1>
 
-            <p>
-                I am Rahul Tiwari, a market participant and professional trader
-                with over 3 years of experience in Indian stock markets,
-                including Equity, Futures and Options.
-            </p>
+        <p>
+            Professional Trader with 3+ years of experience
+            in Indian Stock Markets, Futures & Options.
+        </p>
 
-            <br>
-
-            <p>
-                My approach focuses on market analysis, disciplined execution,
-                capital protection and structured risk management rather than
-                chasing unrealistic returns.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-
-        <div class="section-title">
-            <h2>My Experience</h2>
-            <p>Focused on the Indian Financial Markets</p>
-        </div>
-
-        <div class="stats">
-
-            <div class="stat-box">
-                <h3>3+</h3>
-                <p>Years of Trading Experience</p>
-            </div>
-
-            <div class="stat-box">
-                <h3>F&O</h3>
-                <p>Futures & Options</p>
-            </div>
-
-            <div class="stat-box">
-                <h3>Stocks</h3>
-                <p>Equity Market Experience</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- SERVICES -->
-    <section id="services">
-
-        <div class="section-title">
-            <h2>What I Do</h2>
-            <p>Market-focused services with a risk-first approach</p>
-        </div>
-
-        <div class="services">
-
-            <div class="service-card">
-
-                <div class="icon">📈</div>
-
-                <h3>Stock Market</h3>
-
-                <p>
-                    Market analysis and research focused on
-                    Indian equity markets.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="icon">📊</div>
-
-                <h3>Futures & Options</h3>
-
-                <p>
-                    Experience in F&O markets with emphasis
-                    on strategy, position sizing and risk management.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="icon">💼</div>
-
-                <h3>Account Handling</h3>
-
-                <p>
-                    Assistance related to trading account and
-                    portfolio management, subject to applicable
-                    regulations and client requirements.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PHILOSOPHY -->
-    <section>
-
-        <div class="section-title">
-            <h2>Trading Philosophy</h2>
-        </div>
-
-        <div class="philosophy">
-
-            <div class="philosophy-box">
-
-                <p>
-                    "The goal is not to predict every move of the market.
-                    The goal is to manage risk, follow a process and stay
-                    disciplined when the market becomes unpredictable."
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-
-        <div class="section-title">
-
-            <h2>Let's Connect</h2>
-
-            <p>
-                Interested in discussing markets or professional services?
-                Get in touch.
-            </p>
-
-        </div>
-
-        <a
-            href="https://wa.me/91XXXXXXXXXX"
-            class="btn primary"
-            target="_blank"
-        >
-            WhatsApp Me
+        <a href="#services" class="btn primary">
+            Explore Services
         </a>
 
-        <a
-            href="mailto:your@email.com"
-            class="btn secondary"
-        >
-            Email Me
+        <a href="#contact" class="btn secondary">
+            Contact Me
         </a>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- DISCLAIMER -->
-    <div class="disclaimer">
+<!-- ABOUT -->
+<section id="about">
 
-        <strong>Disclaimer:</strong>
+    <div class="title">
+        <h2>About Me</h2>
+        <p>Experience • Discipline • Risk Management</p>
+    </div>
 
-        Trading and investing in financial markets involves
-        substantial risk of loss. Past performance is not indicative
-        of future results. This website is for informational purposes
-        only and does not constitute a guarantee of returns or
-        financial advice. Services are subject to applicable laws
-        and regulatory requirements.
+    <div class="about">
+
+        <p>
+            I am Rahul Tiwari, a professional trader with
+            more than 3 years of experience in the Indian
+            financial markets.
+        </p>
+
+        <br>
+
+        <p>
+            My experience includes Equity, Futures and Options.
+            My approach focuses on market analysis, disciplined
+            execution, position sizing and risk management.
+        </p>
+
+        <br>
+
+        <p>
+            I also work in account-handling and portfolio-related
+            services, subject to applicable laws and regulations.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience">
+
+    <div class="title">
+        <h2>My Experience</h2>
+        <p>Focused on Indian Financial Markets</p>
+    </div>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h3>3+</h3>
+            <p>Years Trading Experience</p>
+        </div>
+
+        <div class="stat">
+            <h3>F&O</h3>
+            <p>Futures & Options</p>
+        </div>
+
+        <div class="stat">
+            <h3>Stocks</h3>
+            <p>Equity Market</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+    <div class="title">
+        <h2>My Services</h2>
+        <p>Market-focused professional services</p>
+    </div>
+
+    <div class="services">
+
+        <div class="card">
+
+            <div class="icon">📈</div>
+
+            <h3>Stock Market</h3>
+
+            <p>
+                Market research and analysis focused
+                on Indian equity markets.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">📊</div>
+
+            <h3>Futures & Options</h3>
+
+            <p>
+                Experience in F&O trading with focus
+                on strategy, position sizing and
+                risk management.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💼</div>
+
+            <h3>Account Handling</h3>
+
+            <p>
+                Account and portfolio-related assistance
+                based on client requirements and
+                applicable regulations.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PHILOSOPHY -->
+<section>
+
+    <div class="title">
+        <h2>Trading Philosophy</h2>
+        <p>My approach towards the market</p>
+    </div>
+
+    <div class="philosophy">
+
+        <div class="quote">
+
+            <p>
+                "The objective is not to predict every market move.
+                The objective is to follow a disciplined process,
+                manage risk and protect capital."
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <div class="title">
+
+        <h2>Let's Connect</h2>
+
+        <p>
+            For trading and professional service enquiries,
+            feel free to contact me.
+        </p>
 
     </div>
 
 
-    <!-- FOOTER -->
-    <footer>
+    <div class="contact-info">
 
         <p>
-            © 2026 Rahul Tiwari | RT Trading
+            📍 <strong>Shital Tola, Ara, Bihar</strong>
         </p>
 
-    </footer>
+        <p>
+            📱 <strong>+91 9264213097</strong>
+        </p>
+
+    </div>
+
+
+    <!-- WHATSAPP -->
+    <a
+        href="https://wa.me/919264213097"
+        target="_blank"
+        class="btn primary"
+    >
+        💬 WhatsApp Me
+    </a>
+
+
+    <!-- CALL -->
+    <a
+        href="tel:+919264213097"
+        class="btn secondary"
+    >
+        📞 Call Me
+    </a>
+
+</section>
+
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+
+    <strong>Disclaimer:</strong>
+
+    Trading and investing in financial markets involves
+    substantial risk of loss. Past performance is not
+    indicative of future results. This website does not
+    guarantee profits or returns and is for informational
+    purposes only. Services are subject to applicable
+    laws and regulatory requirements.
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 Rahul Tiwari | RT Trading
+    </p>
+
+    <p>
+        Shital Tola, Ara, Bihar
+    </p>
+
+</footer>
 
 </body>
 </html>
