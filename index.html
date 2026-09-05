@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahul Tiwari | Professional Trader</title>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+    body{font-family:Arial,sans-serif;background:#05080d;color:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    nav{position:sticky;top:0;z-index:1000;background:rgba(5,8,13,.96);border-bottom:1px solid #1b2430;padding:18px 6%;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:23px;font-weight:bold;letter-spacing:1px}.logo span{color:#00ff88}
+    .nav-links{display:flex;gap:25px;list-style:none}.nav-links a{color:#b8c2cc;font-size:14px;transition:.3s}.nav-links a:hover{color:#00ff88}
+    .nav-btn{background:#00ff88;color:#000!important;padding:9px 16px;border-radius:8px;font-weight:bold}
+    .hero{min-height:90vh;padding:80px 6%;display:flex;align-items:center;justify-content:space-between;gap:50px;background:radial-gradient(circle at 75% 40%,rgba(0,255,136,.12),transparent 35%)}
+    .hero-text{max-width:650px}.tag{display:inline-block;color:#00ff88;border:1px solid #00ff88;padding:7px 15px;border-radius:30px;font-size:13px;margin-bottom:20px}
+    .hero h1{font-size:clamp(45px,7vw,82px);line-height:1;margin-bottom:20px}.hero h1 span{color:#00ff88}
+    .hero p{color:#9da8b3;font-size:18px;max-width:600px;margin-bottom:30px}
+    .buttons{display:flex;gap:15px;flex-wrap:wrap}.btn{padding:13px 22px;border-radius:9px;font-weight:bold;display:inline-block;transition:.3s}
+    .btn-primary{background:#00ff88;color:#000}.btn-primary:hover{transform:translateY(-3px)}
+    .btn-outline{border:1px solid #34404d;color:#fff}.btn-outline:hover{border-color:#00ff88;color:#00ff88}
+    .profile-box{text-align:center}.profile{width:310px;height:310px;border-radius:50%;object-fit:cover;border:5px solid #00ff88;padding:5px;background:#080d13;box-shadow:0 0 45px rgba(0,255,136,.25)}
+    .profile-box h3{margin-top:18px;font-size:23px}.profile-box p{color:#00ff88;margin-top:5px}
+    section{padding:80px 6%}.section-title{text-align:center;margin-bottom:45px}.section-title h2{font-size:38px;margin-bottom:8px}.section-title p{color:#8e99a5}
+    .index-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.index-card{background:#0b1118;border:1px solid #1d2935;border-radius:15px;padding:25px;transition:.3s}
+    .index-card:hover{transform:translateY(-5px);border-color:#00ff88}.index-card h3{font-size:18px;margin-bottom:8px}.index-card p{color:#00ff88;font-size:14px}
+    .chart-box{background:#0b1118;border:1px solid #1d2935;border-radius:15px;overflow:hidden;height:620px}
+    .tradingview-widget-container,.tradingview-widget-container iframe{width:100%;height:100%}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about-img img{width:280px;height:280px;border-radius:50%;object-fit:cover;border:4px solid #00ff88;padding:5px;display:block;margin:auto}
+    .about-text h2{font-size:38px;margin-bottom:20px}.about-text p{color:#9da8b3;margin-bottom:15px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.service{background:#0b1118;border:1px solid #1d2935;border-radius:15px;padding:30px}
+    .service h3{color:#00ff88;margin-bottom:12px}.service p{color:#9da8b3}
+    .brokers{display:flex;flex-wrap:wrap;justify-content:center;gap:15px}.broker{background:#0b1118;border:1px solid #1d2935;padding:15px 25px;border-radius:10px;color:#ddd}.broker:hover{border-color:#00ff88;color:#00ff88}
+    .contact-box{max-width:750px;margin:auto;text-align:center;background:#0b1118;border:1px solid #1d2935;padding:45px 25px;border-radius:20px}
+    .contact-box h2{font-size:38px;margin-bottom:15px}.contact-box p{color:#9da8b3;margin-bottom:25px}.contact-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+    footer{border-top:1px solid #1b2430;text-align:center;padding:30px 20px;color:#697581;font-size:13px}
+    @media(max-width:900px){
+      .nav-links{display:none}.hero{flex-direction:column-reverse;text-align:center;padding-top:60px}.buttons{justify-content:center}
+      .profile{width:250px;height:250px}.index-grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr;text-align:center}.services{grid-template-columns:1fr}
+    }
+    @media(max-width:500px){
+      section{padding:60px 5%}.index-grid{grid-template-columns:1fr}.hero h1{font-size:48px}.profile{width:210px;height:210px}.chart-box{height:500px}
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">RAHUL <span>TIWARI</span></div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#market">Market</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#brokers">Brokers</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a class="nav-btn" href="https://wa.me/919264213097" target="_blank">WhatsApp</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="tag">PROFESSIONAL TRADER</div>
+    <h1>Rahul<br><span>Tiwari</span></h1>
+    <p>Trader with 3+ years of experience in Stocks and Futures &amp; Options. Focused on market analysis, disciplined trading and portfolio management.</p>
+    <div class="buttons">
+      <a href="https://wa.me/919264213097" class="btn btn-primary" target="_blank">WhatsApp Me</a>
+      <a href="tel:+919264213097" class="btn btn-outline">Call Me</a>
+    </div>
+  </div>
+
+  <div class="profile-box">
+    <img src="profile.jpg" alt="Rahul Tiwari" class="profile">
+    <h3>Rahul Tiwari</h3>
+    <p>Trader &amp; Market Analyst</p>
+  </div>
+</section>
+
+<section id="market">
+  <div class="section-title">
+    <h2>Market Indices</h2>
+    <p>Major Indian market indices</p>
+  </div>
+  <div class="index-grid">
+    <div class="index-card"><h3>NIFTY 50</h3><p>Indian Benchmark Index</p></div>
+    <div class="index-card"><h3>BANK NIFTY</h3><p>Banking Sector Index</p></div>
+    <div class="index-card"><h3>SENSEX</h3><p>BSE Benchmark Index</p></div>
+    <div class="index-card"><h3>INDIA VIX</h3><p>Market Volatility Index</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Market Chart</h2>
+    <p>Interactive market analysis chart</p>
+  </div>
+  <div class="chart-box">
+    <div class="tradingview-widget-container">
+      <div id="tradingview_chart"></div>
+      <script src="https://s3.tradingview.com/tv.js"></script>
+      <script>
+        new TradingView.widget({
+          "width":"100%",
+          "height":"100%",
+          "symbol":"NSE:NIFTY",
+          "interval":"5",
+          "timezone":"Asia/Kolkata",
+          "theme":"dark",
+          "style":"1",
+          "locale":"en",
+          "enable_publishing":false,
+          "hide_top_toolbar":false,
+          "hide_legend":false,
+          "allow_symbol_change":true,
+          "container_id":"tradingview_chart"
+        });
+      </script>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about">
+    <div class="about-img"><img src="profile.jpg" alt="Rahul Tiwari"></div>
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>I am Rahul Tiwari, a professional trader focused on Indian financial markets.</p>
+      <p>With more than 3 years of experience in Stocks and Futures &amp; Options, my approach is based on market analysis, risk management and disciplined execution.</p>
+      <p>I also provide account and portfolio-related services for clients.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-title"><h2>My Services</h2><p>Professional market and trading services</p></div>
+  <div class="services">
+    <div class="service"><h3>Market Analysis</h3><p>Technical and market analysis to understand important market trends and levels.</p></div>
+    <div class="service"><h3>Futures &amp; Options</h3><p>Trading-focused analysis for Futures and Options market participants.</p></div>
+    <div class="service"><h3>Account Handling</h3><p>Account and portfolio-related assistance based on individual requirements.</p></div>
+  </div>
+</section>
+
+<section id="brokers">
+  <div class="section-title"><h2>Trading Platforms</h2><p>Popular platforms used by traders</p></div>
+  <div class="brokers">
+    <div class="broker">Zerodha</div><div class="broker">Upstox</div><div class="broker">Groww</div>
+    <div class="broker">Angel One</div><div class="broker">Dhan</div><div class="broker">FYERS</div>
+    <div class="broker">ICICI Direct</div><div class="broker">TradingView</div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-box">
+    <h2>Let's Connect</h2>
+    <p>For trading-related discussions and services, contact Rahul Tiwari.</p>
+    <p>📍 Shital Tola, Ara, Bihar</p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/919264213097" target="_blank" class="btn btn-primary">WhatsApp</a>
+      <a href="tel:+919264213097" class="btn btn-outline">+91 9264213097</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Rahul Tiwari. All Rights Reserved.
+  <br><br>
+  Disclaimer: Trading in Stocks and Futures &amp; Options involves market risk. This website does not provide guaranteed returns or investment advice.
+</footer>
+
+</body>
+</html>
