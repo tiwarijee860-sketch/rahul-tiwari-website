@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rahul Tiwari | Professional Trader</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #080b12;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0c1019;
+            border-bottom: 1px solid #202735;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #00d084;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ddd;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00d084;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+
+            background:
+                radial-gradient(circle at top, #14251f, #080b12 55%);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .tag {
+            color: #00d084;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #00d084;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #b9bec9;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 28px;
+            margin: 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .primary {
+            background: #00d084;
+            color: #07100c;
+        }
+
+        .primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,208,132,0.25);
+        }
+
+        .secondary {
+            border: 1px solid #00d084;
+            color: #00d084;
+        }
+
+        .secondary:hover {
+            background: #00d084;
+            color: #07100c;
+        }
+
+        /* COMMON */
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #9ca3af;
+        }
+
+        /* ABOUT */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            color: #b9bec9;
+            font-size: 18px;
+        }
+
+        /* STATS */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box {
+            width: 250px;
+            padding: 35px 20px;
+            text-align: center;
+            background: #10151f;
+            border: 1px solid #202735;
+            border-radius: 10px;
+        }
+
+        .stat-box h3 {
+            font-size: 40px;
+            color: #00d084;
+        }
+
+        .stat-box p {
+            color: #aaa;
+        }
+
+        /* SERVICES */
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            width: 300px;
+            min-height: 230px;
+            padding: 30px;
+            background: #10151f;
+            border: 1px solid #202735;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #00d084;
+        }
+
+        .service-card .icon {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+            color: #00d084;
+        }
+
+        .service-card p {
+            color: #aeb4c0;
+        }
+
+        /* PHILOSOPHY */
+        .philosophy {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .philosophy-box {
+            background: #10151f;
+            border-left: 4px solid #00d084;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .philosophy-box p {
+            color: #c4c8d0;
+            font-size: 18px;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            background: #0c1019;
+        }
+
+        .contact p {
+            color: #aaa;
+            margin-bottom: 25px;
+        }
+
+        /* DISCLAIMER */
+        .disclaimer {
+            padding: 35px 8%;
+            background: #07090e;
+            color: #777;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #05070b;
+            color: #777;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 65px 6%;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">RT | TRADING</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="tag">TRADER • MARKETS • DISCIPLINE</div>
+
+            <h1>
+                Rahul <span>Tiwari</span>
+            </h1>
+
+            <p>
+                Professional Trader with 3+ years of experience
+                in Stocks & Futures and Options.
+            </p>
+
+            <a href="#services" class="btn primary">
+                Explore Services
+            </a>
+
+            <a href="#contact" class="btn secondary">
+                Get In Touch
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Experience. Discipline. Risk Management.</p>
+        </div>
+
+        <div class="about">
+
+            <p>
+                I am Rahul Tiwari, a market participant and professional trader
+                with over 3 years of experience in Indian stock markets,
+                including Equity, Futures and Options.
+            </p>
+
+            <br>
+
+            <p>
+                My approach focuses on market analysis, disciplined execution,
+                capital protection and structured risk management rather than
+                chasing unrealistic returns.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+
+        <div class="section-title">
+            <h2>My Experience</h2>
+            <p>Focused on the Indian Financial Markets</p>
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <h3>3+</h3>
+                <p>Years of Trading Experience</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>F&O</h3>
+                <p>Futures & Options</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>Stocks</h3>
+                <p>Equity Market Experience</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services">
+
+        <div class="section-title">
+            <h2>What I Do</h2>
+            <p>Market-focused services with a risk-first approach</p>
+        </div>
+
+        <div class="services">
+
+            <div class="service-card">
+
+                <div class="icon">📈</div>
+
+                <h3>Stock Market</h3>
+
+                <p>
+                    Market analysis and research focused on
+                    Indian equity markets.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">📊</div>
+
+                <h3>Futures & Options</h3>
+
+                <p>
+                    Experience in F&O markets with emphasis
+                    on strategy, position sizing and risk management.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">💼</div>
+
+                <h3>Account Handling</h3>
+
+                <p>
+                    Assistance related to trading account and
+                    portfolio management, subject to applicable
+                    regulations and client requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHILOSOPHY -->
+    <section>
+
+        <div class="section-title">
+            <h2>Trading Philosophy</h2>
+        </div>
+
+        <div class="philosophy">
+
+            <div class="philosophy-box">
+
+                <p>
+                    "The goal is not to predict every move of the market.
+                    The goal is to manage risk, follow a process and stay
+                    disciplined when the market becomes unpredictable."
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Interested in discussing markets or professional services?
+                Get in touch.
+            </p>
+
+        </div>
+
+        <a
+            href="https://wa.me/91XXXXXXXXXX"
+            class="btn primary"
+            target="_blank"
+        >
+            WhatsApp Me
+        </a>
+
+        <a
+            href="mailto:your@email.com"
+            class="btn secondary"
+        >
+            Email Me
+        </a>
+
+    </section>
+
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+
+        <strong>Disclaimer:</strong>
+
+        Trading and investing in financial markets involves
+        substantial risk of loss. Past performance is not indicative
+        of future results. This website is for informational purposes
+        only and does not constitute a guarantee of returns or
+        financial advice. Services are subject to applicable laws
+        and regulatory requirements.
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Rahul Tiwari | RT Trading
+        </p>
+
+    </footer>
+
+</body>
+</html>
